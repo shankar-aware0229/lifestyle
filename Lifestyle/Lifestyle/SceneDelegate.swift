@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Lifestyle
 //
-//  Created by SAGAR THAKARE on 30/10/19.
+//  Created by SHANKAR AWARE on 30/10/19.
 //  Copyright © 2019 Shankar Aware. All rights reserved.
 //
 
