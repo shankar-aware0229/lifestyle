@@ -17,8 +17,9 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
+    /* Entry point for the first VIPER Stack launch */
     func start() {
-        let entity = CategoriesListEntity()
+        let entity = CategoriesListEntity(herokuUrl: URLBuilder.herokuURL)
         let categoriesVC = CategoriesListAssembler(entity: entity)
             .assemble(with: self)
             .viewController

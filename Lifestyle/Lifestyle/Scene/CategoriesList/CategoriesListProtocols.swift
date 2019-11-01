@@ -23,7 +23,8 @@ protocol CategoriesListInteractorInput: class {
 }
 
 protocol CategoriesListInteractorOutput: class {
-   
+    func failed(with: Error)
+    func prepare(_ list: [LifeStyleModel])
 }
 
 protocol CategoriesListUI: class {

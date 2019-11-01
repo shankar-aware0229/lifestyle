@@ -9,4 +9,5 @@
 import Foundation
 
 struct CategoriesListEntity {
+     let herokuUrl: String
 }

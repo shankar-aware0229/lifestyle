@@ -32,5 +32,12 @@ extension CategoriesListPresenter: CategoriesListUser {
 }
 
 extension CategoriesListPresenter: CategoriesListInteractorOutput {
+    func failed(with: Error) {
+        
+    }
+    
+    func prepare(_ list: [LifeStyleModel]) {
+        
+    }
     
 }
