@@ -24,20 +24,14 @@ extension CategoriesListPresenter: CategoriesListUser {
     func loaded() {
         interactor.loaded()
     }
-
-    func appeared() {
-        interactor.appeared()
-    }
-
 }
 
 extension CategoriesListPresenter: CategoriesListInteractorOutput {
+    func prepare(_ info: LifeStyleModel) {
+        ui?.showResult(info.categories)
+    }
+    
     func failed(with: Error) {
         
     }
-    
-    func prepare(_ list: [LifeStyleModel]) {
-        
-    }
-    
 }

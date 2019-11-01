@@ -21,7 +21,7 @@ class CategoriesListInteractor {
 
 extension CategoriesListInteractor: CategoriesListInteractorInput {
     func loaded() {
-        repo.getComponents { [weak self] result in
+        repo.getCategoriesDetails { [weak self] result in
             switch result {
             case .failure(let error):
                 self?.handleError(error)
@@ -29,9 +29,6 @@ extension CategoriesListInteractor: CategoriesListInteractorInput {
                 self?.handleSuccess(list)
             }
         }
-    }
-
-    func appeared() {
     }
 }
 
@@ -41,7 +38,7 @@ private extension CategoriesListInteractor {
          output?.failed(with: error)
     }
 
-    private func handleSuccess(_ result: [LifeStyleModel]) {
+    private func handleSuccess(_ result: LifeStyleModel) {
         output?.prepare(result)
     }
 }

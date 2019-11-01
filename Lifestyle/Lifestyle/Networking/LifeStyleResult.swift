@@ -38,7 +38,7 @@ enum Result<Value> {
 
 protocol AnyCategoryRepository {
     init(url: URL?)
-    func getComponents(_ completion: @escaping ((Result<[LifeStyleModel]>) -> Void))
+    func getCategoriesDetails(_ completion: @escaping ((Result<LifeStyleModel>) -> Void))
 }
 
 enum NetworkError: Error, LocalizedError, Equatable {
@@ -54,7 +54,7 @@ class NetworkCategoryRepository: AnyCategoryRepository {
         self.url = url
     }
     
-    func getComponents(_ completion: @escaping ((Result<[LifeStyleModel]>) -> Void)) {
+    func getCategoriesDetails(_ completion: @escaping ((Result<LifeStyleModel>) -> Void)) {
         guard let url = self.url else {
             completion(.failure(NetworkError.invalidURL))
             return

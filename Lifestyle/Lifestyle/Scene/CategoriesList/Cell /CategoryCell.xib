@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="qJJ-de-naj" customClass="CategoryCell" customModule="Lifestyle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="111" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="111" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-kx-kha">
+                        <rect key="frame" x="0.0" y="2" width="111" height="87"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-sp-l7o">
+                                <rect key="frame" x="10" y="3" width="91" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="iW4-gw-9Eh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.88652618839999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="wi2-sp-l7o" secondAttribute="bottom" id="NF9-ef-3hL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wi2-sp-l7o" secondAttribute="trailing" constant="2" id="a7O-Kk-yxI"/>
+                            <constraint firstItem="wi2-sp-l7o" firstAttribute="leading" secondItem="fyT-kx-kha" secondAttribute="leadingMargin" constant="2" id="djU-wJ-Ml8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fyT-kx-kha" secondAttribute="trailing" id="CQK-ot-JOb"/>
+                <constraint firstAttribute="bottom" secondItem="fyT-kx-kha" secondAttribute="bottom" id="XXm-Fv-gaA"/>
+                <constraint firstItem="fyT-kx-kha" firstAttribute="leading" secondItem="qJJ-de-naj" secondAttribute="leading" id="dss-Qp-1DN"/>
+                <constraint firstItem="fyT-kx-kha" firstAttribute="top" secondItem="qJJ-de-naj" secondAttribute="top" constant="2" id="gGR-Mf-4HD"/>
+            </constraints>
+            <size key="customSize" width="111" height="89"/>
+            <connections>
+                <outlet property="categoryName" destination="wi2-sp-l7o" id="8fk-9Y-vX5"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="-176"/>
+        </collectionViewCell>
+    </objects>
+</document>

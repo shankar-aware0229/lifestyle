@@ -15,9 +15,9 @@ enum ResponseError: Error, LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .noData:
-            return "There is no data"
+            return "There is no data"// no data available on service fetch
         case .wrongData:
-            return "You got something else!"
+            return "You got something else!" // We can change this message to any custom and valid error message to user
         }
     }
 }
@@ -25,14 +25,18 @@ enum ResponseError: Error, LocalizedError, Equatable {
 struct ComponentParser {
     let data: Data?
     
-    func parse() -> Result<[LifeStyleModel]> {
+    func parse() -> Result<LifeStyleModel> {
         guard let data = data else { return .failure(ResponseError.noData) }
         
-        let decoder = JSONDecoder()
-        guard let results = try? decoder.decode([LifeStyleModel].self, from: data) else {
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let results = try decoder.decode(LifeStyleModel.self, from: data)
+            return .success(results)
+        } catch let error {
+            print(error.localizedDescription)
             return .failure(ResponseError.wrongData)
         }
-        
-        return .success(results)
+    
     }
 }

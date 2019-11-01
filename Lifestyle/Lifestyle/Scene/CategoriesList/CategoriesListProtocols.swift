@@ -14,23 +14,21 @@ protocol CategoriesListWireframe: class {
 
 protocol CategoriesListUser: class {
     func loaded()
-    func appeared()
 }
 
 protocol CategoriesListInteractorInput: class {
     func loaded()
-    func appeared()
 }
 
 protocol CategoriesListInteractorOutput: class {
     func failed(with: Error)
-    func prepare(_ list: [LifeStyleModel])
+    func prepare(_ info: LifeStyleModel)
 }
 
 protocol CategoriesListUI: class {
     init(_ presenter: CategoriesListUser)
     var viewController: UIViewController { get }
-    func finished(with viewModel: CategoriesListViewModel)
+    func showResult(_ categoriesList: [Categories])
 }
 
 extension CategoriesListUI where Self: UIViewController {

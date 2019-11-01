@@ -10,32 +10,59 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesListView" customModule="Lifestyle" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="yhO-1g-rsK" id="fLs-yo-6n4"/>
+                <outlet property="collectionView" destination="VNS-Bj-xTO" id="1aW-dv-y0e"/>
+                <outlet property="view" destination="9W2-tI-gy9" id="tzB-q0-12D"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="yhO-1g-rsK">
+        <view contentMode="scaleToFill" id="9W2-tI-gy9">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I6h-zM-Mny">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-YV-dRb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Launch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epW-29-voF">
-                            <rect key="frame" x="51" y="207" width="273" height="99"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtS-r1-k9D" userLabel="Popular Products">
+                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="60"/>
+                            <state key="normal" title="Popular Products"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-wA-jEm" userLabel="Ranking">
+                            <rect key="frame" x="189.5" y="0.0" width="185.5" height="60"/>
+                            <state key="normal" title="Ranking"/>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="zCB-Eb-BuJ"/>
+                    </constraints>
+                </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VNS-Bj-xTO">
+                    <rect key="frame" x="16" y="76" width="343" height="575"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XL3-5Q-GrB">
+                        <size key="itemSize" width="111" height="89"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Reo-P8-Hvn"/>
+                        <outlet property="delegate" destination="-1" id="Q8V-SU-c01"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="tTo-Hp-4u7"/>
-            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+            <constraints>
+                <constraint firstItem="bKk-aE-baJ" firstAttribute="bottom" secondItem="VNS-Bj-xTO" secondAttribute="bottom" constant="16" id="49v-dL-0PB"/>
+                <constraint firstItem="Eb2-YV-dRb" firstAttribute="top" secondItem="bKk-aE-baJ" secondAttribute="top" id="5YO-6a-nub"/>
+                <constraint firstItem="bKk-aE-baJ" firstAttribute="trailing" secondItem="Eb2-YV-dRb" secondAttribute="trailing" id="73z-ap-9Ra"/>
+                <constraint firstItem="Eb2-YV-dRb" firstAttribute="leading" secondItem="bKk-aE-baJ" secondAttribute="leading" id="bhU-V7-kgG"/>
+                <constraint firstItem="VNS-Bj-xTO" firstAttribute="top" secondItem="Eb2-YV-dRb" secondAttribute="bottom" constant="16" id="jaJ-sE-qun"/>
+                <constraint firstItem="VNS-Bj-xTO" firstAttribute="leading" secondItem="bKk-aE-baJ" secondAttribute="leading" constant="16" id="l42-It-OTv"/>
+                <constraint firstItem="bKk-aE-baJ" firstAttribute="trailing" secondItem="VNS-Bj-xTO" secondAttribute="trailing" constant="16" id="yxD-dN-Sy2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bKk-aE-baJ"/>
+            <point key="canvasLocation" x="128.80000000000001" y="76.911544227886068"/>
         </view>
     </objects>
 </document>
