@@ -9,20 +9,23 @@
 import UIKit
 
 protocol CategoriesListWireframe: class {
-    
+    func showSubCategories(with info: Categories)
 }
 
 protocol CategoriesListUser: class {
     func loaded()
+    func selectCategory(at index: Int)
 }
 
 protocol CategoriesListInteractorInput: class {
     func loaded()
+    func selectCategory(at index: Int)
 }
 
 protocol CategoriesListInteractorOutput: class {
     func failed(with: Error)
     func prepare(_ info: LifeStyleModel)
+    func sendProductDetails(_ category: Categories)
 }
 
 protocol CategoriesListUI: class {

@@ -24,14 +24,26 @@ extension CategoriesListPresenter: CategoriesListUser {
     func loaded() {
         interactor.loaded()
     }
+    
+    func selectCategory(at index: Int) {
+        interactor.selectCategory(at: index)
+    }
 }
 
 extension CategoriesListPresenter: CategoriesListInteractorOutput {
     func prepare(_ info: LifeStyleModel) {
+        guard info.categories.count > 0 else {
+            //TODO: handle Error
+            return
+        }
         ui?.showResult(info.categories)
     }
     
     func failed(with: Error) {
-        
+        //TODO: handle Error
+    }
+    
+    func sendProductDetails(_ category: Categories) {
+        wireframe?.showSubCategories(with: category)
     }
 }

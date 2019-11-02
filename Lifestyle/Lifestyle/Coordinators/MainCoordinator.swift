@@ -29,5 +29,15 @@ class MainCoordinator: Coordinator {
 }
 
 extension MainCoordinator: CategoriesListWireframe {
-    
+    func showSubCategories(with info: Categories) {
+        let entity = CategoriesDetailEntity(category: info)
+        let categoriesVC = CategoriesDetailAssembler(entity: entity)
+            .assemble(with: self)
+            .viewController
+        navigationController.pushViewController(categoriesVC, animated: true)
+    }
+}
+
+extension MainCoordinator: CategoriesDetailWireframe {
+
 }

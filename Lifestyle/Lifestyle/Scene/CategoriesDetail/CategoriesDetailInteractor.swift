@@ -19,6 +19,8 @@ class CategoriesDetailInteractor {
 
 extension CategoriesDetailInteractor: CategoriesDetailInteractorInput {
     func loaded() {
+        let category = entity.category
+        output?.showSubCategoriesInfo(category)
     }
 
     func appeared() {

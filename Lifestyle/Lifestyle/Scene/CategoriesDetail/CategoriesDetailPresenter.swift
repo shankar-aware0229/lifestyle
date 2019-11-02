@@ -32,5 +32,7 @@ extension CategoriesDetailPresenter: CategoriesDetailUser {
 }
 
 extension CategoriesDetailPresenter: CategoriesDetailInteractorOutput {
-    
+    func showSubCategoriesInfo(_ category: Categories) {
+        ui?.showResult(category)
+    }
 }

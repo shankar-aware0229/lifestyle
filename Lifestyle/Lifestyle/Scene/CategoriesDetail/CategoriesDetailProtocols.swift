@@ -23,13 +23,14 @@ protocol CategoriesDetailInteractorInput: class {
 }
 
 protocol CategoriesDetailInteractorOutput: class {
+    func showSubCategoriesInfo(_ category: Categories)
    
 }
 
 protocol CategoriesDetailUI: class {
     init(_ presenter: CategoriesDetailUser)
     var viewController: UIViewController { get }
-    func finished(with viewModel: CategoriesDetailViewModel)
+    func showResult(_ category: Categories)
 }
 
 extension CategoriesDetailUI where Self: UIViewController {

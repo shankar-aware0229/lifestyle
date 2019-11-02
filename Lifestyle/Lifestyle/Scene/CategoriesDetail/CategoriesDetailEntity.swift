@@ -9,4 +9,5 @@
 import Foundation
 
 struct CategoriesDetailEntity {
+    let category: Categories
 }

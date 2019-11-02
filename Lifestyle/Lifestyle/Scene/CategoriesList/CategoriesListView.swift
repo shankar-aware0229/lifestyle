@@ -34,13 +34,16 @@ class CategoriesListView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         collectionView.register(UINib(nibName: CategoryCellIdentifier.CategoryCell, bundle: nil),forCellWithReuseIdentifier: CategoryCellIdentifier.CategoryCell)
-        self.title = "Lifestyle"
+        setupCollectionView()
+        title = "Lifestyle"
+        navigationController?.navigationBar.backgroundColor = .green
         user.loaded()
     }
-
-    @IBAction func buttonAction(_ sender: UIButton) {
-       
+    
+    private func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: CategoryCellIdentifier.CategoryCell, bundle: nil),forCellWithReuseIdentifier: CategoryCellIdentifier.CategoryCell)
     }
 }
 
@@ -67,7 +70,7 @@ extension CategoriesListView: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //presenter.collectionViewDidSelectMovieAt(indexPath: indexPath)
+        user.selectCategory(at: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
