@@ -28,7 +28,7 @@ class NetworkTests: XCTestCase {
     }
     
     func test_networkReturnsOnMainThread() {
-        let url: URL = URL(string: "https://www.google.com/givememymoney/you/idiot")!
+        let url: URL = URL(string: "https://www.google.com/anything/you/cando")!
         let network = NetworkCategoryRepository(url: url)
         
         let exp = expectation(description: "Done")

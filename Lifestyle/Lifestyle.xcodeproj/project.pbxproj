@@ -41,6 +41,8 @@
 		B0F17DAB236DB0860094889F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DAA236DB0860094889F /* Localizable.strings */; };
 		B0F17DAD236DB3360094889F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DAC236DB3360094889F /* String.swift */; };
 		B0F17DAF236DB4430094889F /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DAE236DB4430094889F /* NetworkTests.swift */; };
+		B0F17DB1236DB52D0094889F /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DB0236DB52D0094889F /* ParserTests.swift */; };
+		B0F17DB3236DB5A10094889F /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DB2236DB5A10094889F /* Products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		B0F17DAA236DB0860094889F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B0F17DAC236DB3360094889F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B0F17DAE236DB4430094889F /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		B0F17DB0236DB52D0094889F /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		B0F17DB2236DB5A10094889F /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			children = (
 				B0F0CF3A2369C822003FC6A2 /* LifestyleTests.swift */,
 				B0F17DAE236DB4430094889F /* NetworkTests.swift */,
+				B0F17DB0236DB52D0094889F /* ParserTests.swift */,
+				B0F17DB2236DB5A10094889F /* Products.json */,
 				B0F0CF3C2369C822003FC6A2 /* Info.plist */,
 			);
 			path = LifestyleTests;
@@ -348,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F17DB3236DB5A10094889F /* Products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +398,7 @@
 			files = (
 				B0F17DAF236DB4430094889F /* NetworkTests.swift in Sources */,
 				B0F0CF3B2369C822003FC6A2 /* LifestyleTests.swift in Sources */,
+				B0F17DB1236DB52D0094889F /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
