@@ -14,6 +14,7 @@ class CategoriesListInteractor {
     private let repo: AnyCategoryRepository
     private var categories: [Categories] = []
     
+    //Injecting Dependencies
     init(entity: CategoriesListEntity) {
         self.entity = entity
         self.repo = NetworkCategoryRepository(url: URL(string: entity.herokuUrl))
@@ -22,7 +23,9 @@ class CategoriesListInteractor {
 
 extension CategoriesListInteractor: CategoriesListInteractorInput {
     func loaded() {
+        output?.startLoading()
         repo.getCategoriesDetails { [weak self] result in
+            self?.output?.stopLoading()
             switch result {
             case .failure(let error):
                 self?.handleError(error)

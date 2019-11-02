@@ -24,7 +24,7 @@ extension CategoriesListPresenter: CategoriesListUser {
     func loaded() {
         interactor.loaded()
     }
-    
+
     func selectCategory(at index: Int) {
         interactor.selectCategory(at: index)
     }
@@ -39,8 +39,16 @@ extension CategoriesListPresenter: CategoriesListInteractorOutput {
         ui?.showResult(info.categories)
     }
     
-    func failed(with: Error) {
-        //TODO: handle Error
+    func startLoading() {
+        ui?.startAnimating()
+    }
+    
+    func stopLoading() {
+        ui?.stopAnimating()
+    }
+    
+    func failed(with error: Error) {
+        ui?.errorMessage(with: error)
     }
     
     func sendProductDetails(_ category: Categories) {

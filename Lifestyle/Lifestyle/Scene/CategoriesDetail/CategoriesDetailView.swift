@@ -36,6 +36,7 @@ class CategoriesDetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Sub-Categories"
         setupCollectionView()
         user.loaded()
     }

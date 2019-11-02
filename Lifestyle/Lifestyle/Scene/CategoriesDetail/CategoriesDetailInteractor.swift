@@ -12,6 +12,7 @@ class CategoriesDetailInteractor {
     weak var output: CategoriesDetailInteractorOutput?
     private let entity: CategoriesDetailEntity
 
+    //Injecting Dependencies
     init(entity: CategoriesDetailEntity) {
         self.entity = entity
     }

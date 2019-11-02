@@ -15,9 +15,9 @@ enum ResponseError: Error, LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .noData:
-            return "There is no data"// no data available on service fetch
+            return "There is no data available. Please contact support team."// no data available on service fetch
         case .wrongData:
-            return "You got something else!" // We can change this message to any custom and valid error message to user
+            return "Something went wrong, Please try again later!!!" // We can change this message to any custom and valid error message to user
         }
     }
 }

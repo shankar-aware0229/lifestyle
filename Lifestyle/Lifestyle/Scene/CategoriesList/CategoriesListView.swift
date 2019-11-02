@@ -22,6 +22,7 @@ class CategoriesListView: UIViewController {
     private let user: CategoriesListUser
     private var categories = [Categories]()
     @IBOutlet weak var collectionView: UICollectionView!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     required init(_ user: CategoriesListUser) {
         self.user = user
@@ -35,9 +36,17 @@ class CategoriesListView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupActivityIndicator()
         title = "Lifestyle"
         navigationController?.navigationBar.backgroundColor = .green
         user.loaded()
+    }
+    
+    private func setupActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     private func setupCollectionView() {
@@ -51,6 +60,20 @@ extension CategoriesListView: CategoriesListUI {
     func showResult(_ categoriesList: [Categories]) {
         categories = categoriesList
         collectionView.reloadData()
+    }
+    
+    func errorMessage(with error: Error) {
+        let alert = UIAlertController(title: "Opps", message: "\(error.localizedDescription)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func startAnimating() {
+        activityIndicator.startAnimating()
+    }
+    
+    func stopAnimating() {
+        activityIndicator.stopAnimating()
     }
 }
 

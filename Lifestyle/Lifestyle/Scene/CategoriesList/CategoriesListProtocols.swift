@@ -26,12 +26,17 @@ protocol CategoriesListInteractorOutput: class {
     func failed(with: Error)
     func prepare(_ info: LifeStyleModel)
     func sendProductDetails(_ category: Categories)
+    func startLoading()
+    func stopLoading()
 }
 
 protocol CategoriesListUI: class {
     init(_ presenter: CategoriesListUser)
     var viewController: UIViewController { get }
     func showResult(_ categoriesList: [Categories])
+    func errorMessage(with error: Error)
+    func startAnimating()
+    func stopAnimating()
 }
 
 extension CategoriesListUI where Self: UIViewController {

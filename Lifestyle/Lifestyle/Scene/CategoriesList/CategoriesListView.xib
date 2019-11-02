@@ -19,24 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-YV-dRb">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtS-r1-k9D" userLabel="Popular Products">
-                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="60"/>
-                            <state key="normal" title="Popular Products"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-wA-jEm" userLabel="Ranking">
-                            <rect key="frame" x="189.5" y="0.0" width="185.5" height="60"/>
-                            <state key="normal" title="Ranking"/>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="zCB-Eb-BuJ"/>
-                    </constraints>
-                </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VNS-Bj-xTO">
-                    <rect key="frame" x="16" y="76" width="343" height="575"/>
+                    <rect key="frame" x="16" y="16" width="343" height="635"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XL3-5Q-GrB">
                         <size key="itemSize" width="111" height="89"/>
@@ -50,10 +34,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="bKk-aE-baJ" firstAttribute="bottom" secondItem="VNS-Bj-xTO" secondAttribute="bottom" constant="16" id="49v-dL-0PB"/>
-                <constraint firstItem="Eb2-YV-dRb" firstAttribute="top" secondItem="bKk-aE-baJ" secondAttribute="top" id="5YO-6a-nub"/>
-                <constraint firstItem="bKk-aE-baJ" firstAttribute="trailing" secondItem="Eb2-YV-dRb" secondAttribute="trailing" id="73z-ap-9Ra"/>
-                <constraint firstItem="Eb2-YV-dRb" firstAttribute="leading" secondItem="bKk-aE-baJ" secondAttribute="leading" id="bhU-V7-kgG"/>
-                <constraint firstItem="VNS-Bj-xTO" firstAttribute="top" secondItem="Eb2-YV-dRb" secondAttribute="bottom" constant="16" id="jaJ-sE-qun"/>
+                <constraint firstItem="VNS-Bj-xTO" firstAttribute="top" secondItem="bKk-aE-baJ" secondAttribute="top" constant="16" id="Gav-bw-IFg"/>
                 <constraint firstItem="VNS-Bj-xTO" firstAttribute="leading" secondItem="bKk-aE-baJ" secondAttribute="leading" constant="16" id="l42-It-OTv"/>
                 <constraint firstItem="bKk-aE-baJ" firstAttribute="trailing" secondItem="VNS-Bj-xTO" secondAttribute="trailing" constant="16" id="yxD-dN-Sy2"/>
             </constraints>
