@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Lifestyle
+
+  Created by SAGAR THAKARE on 02/11/19.
+  Copyright © 2019 Shankar Aware. All rights reserved.
+*/
+
+
+// Alert
+"Alert.Button.Action.Ok"="Ok";
+"Alert.Title.Text"="Opps";
+
+"CategoriesListView.Title.Text"="Lifestyle";
+
+"CategoriesDetailView.Title.Text"="Sub-Categories";
+"CategoriesDetailView.Color.Name"="COLOR";
+"CategoriesDetailView.Size.Name"="SIZE";
+"CategoriesDetailView.Prize.Name"="PRIZE";

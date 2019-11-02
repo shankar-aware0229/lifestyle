@@ -37,7 +37,7 @@ class CategoriesListView: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupActivityIndicator()
-        title = "Lifestyle"
+        title = "CategoriesListView.Title.Text".local
         navigationController?.navigationBar.backgroundColor = .green
         user.loaded()
     }
@@ -63,8 +63,8 @@ extension CategoriesListView: CategoriesListUI {
     }
     
     func errorMessage(with error: Error) {
-        let alert = UIAlertController(title: "Opps", message: "\(error.localizedDescription)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        let alert = UIAlertController(title: "Alert.Title.Text".local.uppercased(), message: "\(error.localizedDescription)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Alert.Button.Action.Ok".local.uppercased(), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     

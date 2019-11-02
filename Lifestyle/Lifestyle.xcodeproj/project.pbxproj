@@ -38,6 +38,8 @@
 		B0F17DA5236CE8F70094889F /* CategoryDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DA3236CE8F60094889F /* CategoryDetailsCell.xib */; };
 		B0F17DA7236CEA770094889F /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DA6236CEA770094889F /* SectionHeaderView.swift */; };
 		B0F17DA9236CF3A60094889F /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DA8236CF3A60094889F /* SectionHeaderView.xib */; };
+		B0F17DAB236DB0860094889F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DAA236DB0860094889F /* Localizable.strings */; };
+		B0F17DAD236DB3360094889F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DAC236DB3360094889F /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		B0F17DA3236CE8F60094889F /* CategoryDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryDetailsCell.xib; sourceTree = "<group>"; };
 		B0F17DA6236CEA770094889F /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		B0F17DA8236CF3A60094889F /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		B0F17DAA236DB0860094889F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B0F17DAC236DB3360094889F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 				B0F17D482369D3C10094889F /* Scene */,
 				B0F0CF2C2369C822003FC6A2 /* Assets.xcassets */,
 				B0F0CF2E2369C822003FC6A2 /* LaunchScreen.storyboard */,
+				B0F17DAA236DB0860094889F /* Localizable.strings */,
 				B0F0CF312369C822003FC6A2 /* Info.plist */,
 			);
 			path = Lifestyle;
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B0F17D74236C82530094889F /* URLBuilder.swift */,
+				B0F17DAC236DB3360094889F /* String.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				B0F17DA5236CE8F70094889F /* CategoryDetailsCell.xib in Resources */,
 				B0F17D85236CB24F0094889F /* CategoriesListView.xib in Resources */,
 				B0F0CF2D2369C822003FC6A2 /* Assets.xcassets in Resources */,
+				B0F17DAB236DB0860094889F /* Localizable.strings in Resources */,
 				B0F17D8A236CD61E0094889F /* CategoryCell.xib in Resources */,
 				B0F17DA9236CF3A60094889F /* SectionHeaderView.xib in Resources */,
 			);
@@ -354,6 +361,7 @@
 				B0F17D61236A25410094889F /* CategoriesListPresenter.swift in Sources */,
 				B0F17D99236CDBED0094889F /* CategoriesDetailInteractor.swift in Sources */,
 				B0F17D64236A25410094889F /* CategoriesListProtocols.swift in Sources */,
+				B0F17DAD236DB3360094889F /* String.swift in Sources */,
 				B0F17D97236CDBED0094889F /* CategoriesDetailAssembler.swift in Sources */,
 				B0F17D98236CDBED0094889F /* CategoriesDetailPresenter.swift in Sources */,
 				B0F17D75236C82530094889F /* URLBuilder.swift in Sources */,

@@ -22,8 +22,8 @@ class CategoryDetailsCell: UICollectionViewCell {
     }
     
     func configureCell(for varient: Varients) {
-        colorLabel.text = "COLOR: \(varient.color ?? "")"
-        sizeLabel.text = "SIZE: \(varient.size ?? 0)"
-        prizeLabel.text = "PRIZE: \(varient.price ?? 0)"
+        colorLabel.text = "\("CategoriesDetailView.Color.Name".local.uppercased()): \(varient.color ?? "")"
+        sizeLabel.text = "\("CategoriesDetailView.Size.Name".local.uppercased()): \(varient.size ?? 0)"
+        prizeLabel.text = "\("CategoriesDetailView.Prize.Name".local.uppercased()): \(varient.price ?? 0)"
     }
 }
