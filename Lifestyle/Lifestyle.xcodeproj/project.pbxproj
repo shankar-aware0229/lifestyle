@@ -40,6 +40,7 @@
 		B0F17DA9236CF3A60094889F /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DA8236CF3A60094889F /* SectionHeaderView.xib */; };
 		B0F17DAB236DB0860094889F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0F17DAA236DB0860094889F /* Localizable.strings */; };
 		B0F17DAD236DB3360094889F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DAC236DB3360094889F /* String.swift */; };
+		B0F17DAF236DB4430094889F /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F17DAE236DB4430094889F /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		B0F17DA8236CF3A60094889F /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		B0F17DAA236DB0860094889F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B0F17DAC236DB3360094889F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B0F17DAE236DB4430094889F /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B0F0CF3A2369C822003FC6A2 /* LifestyleTests.swift */,
+				B0F17DAE236DB4430094889F /* NetworkTests.swift */,
 				B0F0CF3C2369C822003FC6A2 /* Info.plist */,
 			);
 			path = LifestyleTests;
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F17DAF236DB4430094889F /* NetworkTests.swift in Sources */,
 				B0F0CF3B2369C822003FC6A2 /* LifestyleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
